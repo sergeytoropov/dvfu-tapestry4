@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC
+        "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+        "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<page-specification class="ru.sergeytoropov.pages.Home">
+    <description>Карточка проекта</description>
+
+    <component id="ident" type="Insert">
+        <binding name="value" expression="ident"/>
+    </component>
+
+    <component id="code" type="Insert">
+        <binding name="value" expression="code"/>
+    </component>
+
+    <component id="title" type="Insert">
+        <binding name="value" expression="title"/>
+    </component>
+
+    <component id="description" type="Insert">
+        <binding name="value" expression="description"/>
+    </component>
+
+    <component id="date" type="Insert">
+        <binding name="value" expression="date"/>
+        <binding name="format" expression="dateFormat"/>
+    </component>
+
+    <component id="projectEditForm" type="Form">
+        <binding name="listener" expression ="listeners.actionOnEdit"/>
+    </component>
+</page-specification>

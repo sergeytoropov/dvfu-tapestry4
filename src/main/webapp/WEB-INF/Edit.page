@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-specification PUBLIC
+        "-//Apache Software Foundation//Tapestry Specification 3.0//EN"
+        "http://jakarta.apache.org/tapestry/dtd/Tapestry_3_0.dtd">
+
+<page-specification class="ru.sergeytoropov.pages.Edit">
+
+    <description>Редактирование карточки проекта</description>
+    <bean name="delegate" class="org.apache.tapestry.valid.ValidationDelegate"/>
+
+    <component id="editIdent" type="TextField">
+        <binding name="value" expression="ident"/>
+    </component>
+
+    <component id="editCode" type="TextField">
+        <binding name="value" expression="code"/>
+    </component>
+
+    <component id="editTitle" type="TextField">
+        <binding name="value" expression="title"/>
+    </component>
+
+    <component id="editDescription" type="TextField">
+        <binding name="value" expression="description"/>
+    </component>
+
+    <component id="projectSaveForm" type="Form">
+        <binding name="listener" expression="listeners.actionOnSave"/>
+        <binding name="delegate" expression="beans.delegate"/>
+    </component>
+    <component id="saveBtn" type="Submit">
+        <binding name="selected" expression="buttonClicked"/>
+        <static-binding name="tag" value="SAVE"/>
+    </component>
+    <component id="cancelBtn" type="Submit">
+        <binding name="selected" expression="buttonClicked"/>
+        <static-binding name="tag" value="CANCEL"/>
+    </component>
+
+    <component id="errors" type="Delegator">
+        <binding name="delegate" expression="delegate.firstError"/>
+    </component>
+</page-specification>

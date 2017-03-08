@@ -1,0 +1,36 @@
+<html jwcid="@Shell" title="Edit Test Project">
+<body jwcid="@Body">
+<h2>Редактирование карточки проекта:</h2>
+<span jwcid="errors"/>
+<form jwcid="projectSaveForm">
+    <table>
+        <tbody>
+        <tr>
+            <td><label>Идентификатор:</label></td>
+            <td><input type="text" jwcid="editIdent" value=""/></td>
+        </tr>
+        <tr>
+            <td><label>Код:</label></td>
+            <td><input type="text" jwcid="editCode" value=""/></td>
+        </tr>
+        <tr>
+            <td><label>Название:</label></td>
+            <td><input type="text" jwcid="editTitle" value=""/></td>
+        </tr>
+        <tr>
+            <td><label>Описание:</label></td>
+            <td><input type="text" jwcid="editDescription" value=""/></td>
+        </tr>
+        <tr>
+            <td><label>Дата создания:</label></td>
+            <td><span jwcid="@DatePicker" value="ognl:date"/></td>
+        </tr>
+        </tbody>
+    </table>
+    <p>
+        <input type="submit" jwcid="saveBtn" value="Сохранить"/>
+        <input type="submit" jwcid="cancelBtn" value="Отменить"/>
+    </p>
+</form>
+</body>
+</html>
