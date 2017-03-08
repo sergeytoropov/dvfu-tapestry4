@@ -23,18 +23,6 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-<!--
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-        </dependency>
--->
 
         <dependency>
             <groupId>org.apache.tapestry</groupId>
@@ -82,14 +70,6 @@
                     <path>/tapestry4</path>
                     <update>true</update>
                 </configuration>
-<!--                <configuration>
-                    &lt;!&ndash;                    <contextFile>src/main/resources/tomcat/context.xml</contextFile>&ndash;&gt;
-                    <systemProperties>
-                        <file.encoding>UTF-8</file.encoding>
-                        &lt;!&ndash;                        <spring.profiles.active>tomcat,datajpa</spring.profiles.active>&ndash;&gt;
-                    </systemProperties>
-                    <protocol>org.apache.coyote.http11.Http11NioProtocol</protocol>
-                </configuration>-->
             </plugin>
         </plugins>
     </build>
